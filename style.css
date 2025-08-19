@@ -1,0 +1,186 @@
+/* TODO 
+
+1) media query para os varios screen sizes
+2) Table
+3) Host
+4) Check for repeated code
+5) semantic html [x]
+6) Github
+7) Host somewhere
+
+
+*/
+
+:root {
+  /* Colors  */
+  --brown800: hsl(14, 45%, 36%);
+  --rose50: hsl(330, 100%, 98%);
+  --rose800: hsl(332, 51%, 32%);
+  --stone100: hsl(30, 54%, 90%);
+  --stone150: hsl(30, 18%, 87%);
+  --stone600: hsl(30, 10%, 34%);
+  --stone900: hsl(24, 5%, 18%);
+  --white: hsl(0, 0%, 100%);
+  /* Dimensions  */
+  --widthDesktop: 1440px;
+  --widthMobile: 375px;
+  --widthTest: 700px;
+  /* Reset  */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Outfit";
+  font-weight: 400;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit/static/Outfit-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit/static/Outfit-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit/static/Outfit-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--stone100);
+  font-size: 16px;
+}
+
+.image img {
+  width: 100%;
+  border-radius: 20px;
+  padding-right: 10px;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+
+h2 {
+  color: var(--brown800);
+}
+
+h3 {
+  color: var(--rose800);
+}
+
+span {
+  font-family: "Outfit";
+  font-weight: 600;
+}
+
+li {
+  padding-left: 15px;
+}
+
+ul li {
+  font-size: 14px;
+}
+
+ol li::marker {
+  color: var(--brown800);
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border-bottom: 1px solid var(--stone150);
+  padding: 8px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+hr {
+  border: none;
+  height: 0.3px;
+  width: 100%;
+  background-color: var(--stone150);
+}
+
+.values {
+  font-family: "Outfit";
+  font-weight: 700;
+  color: var(--brown800);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: var(--widthTest);
+  min-height: 80%;
+  background-color: var(--white);
+  border-radius: 20px;
+  margin-top: 40px;
+  padding: 30px;
+  font-family: "outfit";
+  font-weight: 400;
+}
+
+.prepTime {
+  background-color: var(--rose50);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  line-height: 1.6em;
+}
+
+.prepTime ul {
+  padding-left: 25px;
+}
+
+.prepTime li::marker {
+  color: var(--rose800);
+}
+
+.ingredients ul {
+  line-height: 1.6em;
+  padding-left: 25px;
+}
+
+.ingredients li::marker {
+  color: var(--brown800);
+}
+
+.instructions ol {
+  line-height: 1.6em;
+  padding-left: 25px;
+}
