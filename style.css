@@ -2,11 +2,11 @@
 
 1) media query para os varios screen sizes
 2) Table
-3) Host
+3) Host somewhere [x]
 4) Check for repeated code
 5) semantic html [x]
-6) Github
-7) Host somewhere
+6) Github [x]
+7) Check resolution for small devices, probably need tweak padding/margin/font-size
 
 
 */
@@ -29,18 +29,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  margin-top: 20px;
-  font-family: "Outfit";
-  font-weight: 400;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
 
 @font-face {
@@ -70,18 +58,44 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
   background-color: var(--stone100);
-  font-size: 16px;
+  font-size: clamp(0.875rem, 0.8036rem + 0.3571vw, 1.125rem);
 }
 
-.image img {
+.attribution {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-family: "Outfit";
+  font-weight: 400;
+  font-size: clamp(0.6875rem, 0.6339rem + 0.2679vw, 0.875rem);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  max-width: clamp(20rem, 0rem + 100vw, 90rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: var(--white);
+  padding: 2rem;
+  margin-top: 2.5rem;
+  border-radius: 1.25rem;
+  font-family: "outfit";
+  font-weight: 400;
+}
+
+picture img {
   width: 100%;
-  border-radius: 20px;
-  padding-right: 10px;
+  border-radius: 0.5rem;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 1.2857rem + 1.0714vw, 2.25rem);
 }
 
 h1,
@@ -104,11 +118,7 @@ span {
 }
 
 li {
-  padding-left: 15px;
-}
-
-ul li {
-  font-size: 14px;
+  padding-left: clamp(1rem, 0.5rem + 2.5vw, 2.75rem);
 }
 
 ol li::marker {
@@ -123,9 +133,9 @@ table {
 
 td {
   border-bottom: 1px solid var(--stone150);
-  padding: 8px;
+  padding: 0.5rem;
   text-align: left;
-  padding-left: 20px;
+  padding-left: 1.25rem;
 }
 
 hr {
@@ -141,30 +151,18 @@ hr {
   color: var(--brown800);
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  width: var(--widthTest);
-  min-height: 80%;
-  background-color: var(--white);
-  border-radius: 20px;
-  margin-top: 40px;
-  padding: 30px;
-  font-family: "outfit";
-  font-weight: 400;
-}
-
-.prepTime {
+section.prepTime {
   background-color: var(--rose50);
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  padding: 20px;
-  line-height: 1.6em;
+  margin-top: 1.25rem;
+  margin-bottom: 0.6rem;
+  border-radius: 0.6rempx;
+  padding: 1.25rem;
+  line-height: 1.6em; /* ? */
 }
 
 .prepTime ul {
-  padding-left: 25px;
+  /* padding-left: 25px; */
+  padding-left: 1.5rem;
 }
 
 .prepTime li::marker {
@@ -172,8 +170,8 @@ hr {
 }
 
 .ingredients ul {
-  line-height: 1.6em;
-  padding-left: 25px;
+  line-height: 1.6em; /* ? */
+  padding-left: 1.5rem;
 }
 
 .ingredients li::marker {
@@ -181,6 +179,6 @@ hr {
 }
 
 .instructions ol {
-  line-height: 1.6em;
-  padding-left: 25px;
+  line-height: 1.6em; /* ? */
+  padding-left: 1.5rem;
 }
